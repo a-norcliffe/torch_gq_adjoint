@@ -21,7 +21,7 @@ Neural ODEs demonstrate strong performance in generative and time-series modelli
 
 
 # Requirements
-To run all the code in the library you will the majority of the standard packages
+To run all the code in the library you will need the majority of the standard packages
 for machine learning in python. Including but not limited to:
 
 - numpy
@@ -80,7 +80,7 @@ After running the experiments, the results are saved in the `results` directory,
 ### Plotting Code
 For the users benefit we have included the plotting code we used to generate the plots in the paper.
 However, this was not written with the intention of being used by others, so it
-is not well documented and may be difficult to use. We have not tested it since writing the
+is not well documented and may be difficult to use. We have not tested it extensively since writing the
 paper.
 
 
@@ -154,6 +154,9 @@ The following fixed methods are included in the tests:
 The following adaptive methods are included in the tests:
 `'dopri5', 'bosh3', 'adaptive_heun', 'dopri8'`
 
+Newly released torch differentiable ODE solvers are not included in the tests. Since
+this repo is not actively maintained.
+
 **Please note**: The paper only tests the gradient speed up of the dopri5 solver,
 the other solvers are included for completeness. We believe these speedups would also
 be seen in the other solvers, but we have not tested this.
@@ -183,7 +186,11 @@ If you find this code or our paper useful in your own research, please cite our 
 
 
 # Acknowledgements
-We thank the anonymous reviewers for their comments and suggestions for this paper.
 At the time of publishing this work, Alexander Norcliffe is supported by a GlaxoSmithKline grant.
+We thank So Takao for his help with understanding the Wong--Zakai theorem for the SDE
+adaptation of the GQ method.
+We would like to thank the anonymous reviewers and action editor 
+Kevin Swersky for their time and efforts to review and constructively critique the paper.
 A very large amount of this work was heavily dependent on the `torchdiffeq` library,
-we thank the authors for their work on this library.
+we thank the authors Ricky Chen, Yulia Rubanova, Jesse Bettencourt
+and David Duvenaud for their work on this library.
