@@ -21,6 +21,10 @@ parser.add_argument('--batchsize', type=int, default=16)
 args = parser.parse_args()
 
 
+if not osp.exists(osp.join('plotting', 'plots')):
+    os.makedirs(osp.join('plotting', 'plots'))
+
+
 sns.set_style('whitegrid')
 rc('font', family='serif')
 

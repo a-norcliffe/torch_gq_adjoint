@@ -26,6 +26,10 @@ from matplotlib.pyplot import rc
 from plotting.colors_and_styles import colors_dict, linestyles_dict
 
 
+if not osp.exists(osp.join('plotting', 'plots')):
+    os.makedirs(osp.join('plotting', 'plots'))
+
+
 sns.set_style('whitegrid')
 rc('font', family='serif')
 

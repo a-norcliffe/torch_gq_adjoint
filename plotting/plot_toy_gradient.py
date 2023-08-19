@@ -15,8 +15,8 @@ from matplotlib.pyplot import rc
 from plotting.colors_and_styles import method_colors, method_linestyles, method_markers, method_names
 
 
-if not osp.exists('plotting/plots'):
-    os.makedirs('plotting/plots')
+if not osp.exists(osp.join('plotting', 'plots')):
+    os.makedirs(osp.join('plotting', 'plots'))
 
 
 sns.set_style('whitegrid')

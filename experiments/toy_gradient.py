@@ -154,7 +154,7 @@ for m in ['gq', 'adjoint', 'direct', 'mali', 'aca']:
 
 
     # make linspace of Ts to test and set up save folder and empty lists of results
-    Ts = np.arange(19.0, 29.0, 0.5)
+    Ts = np.arange(19.0, 29.05, 0.02)
     t_list = []
     loss_error_list = []
     a_error_list = []
